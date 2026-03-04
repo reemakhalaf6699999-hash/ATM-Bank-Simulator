@@ -1,3 +1,4 @@
+//IGNORE - Git Commit test
 package com.atmbanksimulator;
 
 // ===== 📚🌐Bank (Domain / Service / Business Logic) =====
