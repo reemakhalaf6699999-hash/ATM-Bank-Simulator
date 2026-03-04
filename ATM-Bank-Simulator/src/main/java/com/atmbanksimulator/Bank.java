@@ -1,4 +1,5 @@
 //IGNORE - Git Commit test
+//Something else to test merge
 package com.atmbanksimulator;
 
 // ===== 📚🌐Bank (Domain / Service / Business Logic) =====
