@@ -1,4 +1,5 @@
-//IGNORE - Git Commit test
+//IGNORE - Git Commit test 
+// edits today
 package com.atmbanksimulator;
 
 // ===== 📚🌐Bank (Domain / Service / Business Logic) =====
