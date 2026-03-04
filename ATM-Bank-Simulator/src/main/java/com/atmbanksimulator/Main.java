@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 // - Bank / BankAccount are the real "money world" rules.
 // Together, they simulate how an ATM thinks, reacts, and handles money.
 
+
+// changes
 public class Main extends Application {
     public static void main( String args[] ) {launch(args);}
 
