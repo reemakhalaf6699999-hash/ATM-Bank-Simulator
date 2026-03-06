@@ -1,5 +1,4 @@
 //IGNORE - Git Commit test 
-// edits today
 package com.atmbanksimulator;
 
 public class Bank {
