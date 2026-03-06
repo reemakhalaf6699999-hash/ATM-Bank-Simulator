@@ -1,28 +1,28 @@
-//IGNORE - Git Commit test 
-// edits today
 package com.atmbanksimulator;
 
 public class Bank {
+
+    // ADD THIS ENUM at the top of the class (after the class declaration)
+    public enum AccountType {
+        STANDARD, STUDENT, PRIME, SAVING
+    }
+
     private int maxAccounts = 10;
     private int numAccounts = 0;
     private BankAccount[] accounts;
     private BankAccount loggedInAccount;
-
-
-    public enum AccountType {
-        STANDARD, STUDENT, PRIME, SAVING
-    }
 
     public Bank() {
         this.accounts = new BankAccount[this.maxAccounts];
         this.loggedInAccount = null;
     }
 
-
+    // MODIFY this method to accept AccountType
     public BankAccount makeBankAccount(String accNumber, String accPasswd, int balance, AccountType type) {
         switch (type) {
             case STUDENT:
                 return new StudentAccount(accNumber, accPasswd, balance);
+            // We'll add PRIME and SAVING later when Daniella creates them
             default:
                 return new BankAccount(accNumber, accPasswd, balance);
         }
@@ -38,19 +38,21 @@ public class Bank {
         }
     }
 
-
+    // MODIFY this method - now accepts AccountType
     public boolean addBankAccount(String accNumber, String accPasswd, int balance, AccountType type) {
-        return this.addBankAccount(this.makeBankAccount(accNumber, accPasswd, balance, type));
+        return addBankAccount(makeBankAccount(accNumber, accPasswd, balance, type));
     }
 
     public boolean login(String accountNumber, String password) {
         this.logout();
+
         for(BankAccount b : this.accounts) {
             if (b != null && b.getAccNumber().equals(accountNumber) && b.getaccPasswd().equals(password)) {
                 this.loggedInAccount = b;
                 return true;
             }
         }
+
         this.loggedInAccount = null;
         return false;
     }
@@ -76,7 +78,9 @@ public class Bank {
     public int getBalance() {
         return this.loggedIn() ? this.loggedInAccount.getBalance() : -1;
     }
-}
 
-// I am making more changes
-//more changes
+    // ADD this getter method
+    public BankAccount getLoggedInAccount() {
+        return loggedInAccount;
+    }
+}

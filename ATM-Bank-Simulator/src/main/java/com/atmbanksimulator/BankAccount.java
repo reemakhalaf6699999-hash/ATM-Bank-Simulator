@@ -53,4 +53,8 @@ public class BankAccount {
     public String getaccPasswd() {
         return accPasswd;
     }
+    // Add this getter method
+    public BankAccount getLoggedInAccount() {
+        return this;
+    }
 }
