@@ -6,7 +6,7 @@ public class Bank {
     private BankAccount[] accounts;
     private BankAccount loggedInAccount;
 
-    // ضيفي الـ enum ده تحت الـ variables
+
     public enum AccountType {
         STANDARD, STUDENT, PRIME, SAVING
     }
@@ -16,7 +16,7 @@ public class Bank {
         this.loggedInAccount = null;
     }
 
-    // غيري هالدالة للكود ده
+
     public BankAccount makeBankAccount(String accNumber, String accPasswd, int balance, AccountType type) {
         switch (type) {
             case STUDENT:
@@ -36,7 +36,7 @@ public class Bank {
         }
     }
 
-    // غيري هالدالة
+
     public boolean addBankAccount(String accNumber, String accPasswd, int balance, AccountType type) {
         return this.addBankAccount(this.makeBankAccount(accNumber, accPasswd, balance, type));
     }

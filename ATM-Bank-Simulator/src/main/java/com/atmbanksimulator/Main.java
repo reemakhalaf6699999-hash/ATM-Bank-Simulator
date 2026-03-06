@@ -11,7 +11,7 @@ public class Main extends Application {
     public void start(Stage window) {
         Bank bank = new Bank();
 
-        // غيري هالسطرين
+        
         bank.addBankAccount("10001", "11111", 100, Bank.AccountType.STANDARD);
         bank.addBankAccount("10002", "22222", 50, Bank.AccountType.STUDENT);
 
