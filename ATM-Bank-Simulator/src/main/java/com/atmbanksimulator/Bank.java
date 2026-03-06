@@ -1,3 +1,5 @@
+//IGNORE - Git Commit test 
+// edits today
 package com.atmbanksimulator;
 
 public class Bank {
@@ -75,3 +77,6 @@ public class Bank {
         return this.loggedIn() ? this.loggedInAccount.getBalance() : -1;
     }
 }
+
+// I am making more changes
+//more changes
